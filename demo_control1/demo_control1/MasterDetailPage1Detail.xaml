@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.MasterDetailPage1Detail"
+             Title="Detail">
+  <StackLayout Padding="10">
+    <Label Text="Demo các Control cơ bản" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+  </StackLayout>
+</ContentPage>

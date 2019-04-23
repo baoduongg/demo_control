@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.PageEntry"
+             >
+   
+      
+            <StackLayout>
+        <Label Text="Demo Entry" FontSize="30"/>
+        <Entry Placeholder="Nhập 10 kí tự"
+                   WidthRequest="150"
+                   PlaceholderColor="Olive"
+                   MaxLength="10"
+                   TextColor="Green"
+                   BackgroundColor="#2c3e50"
+                  
+                />
+            
+            <Entry x:Name="EntyLogin"
+                    Placeholder="Tên đăng nhập"
+                   WidthRequest="150"
+                   PlaceholderColor="Olive"                 
+          
+               />
+
+            <Entry x:Name="EntyPass" 
+                Placeholder="Mật khẩu"
+                   IsPassword="True"
+               />
+     
+            <Entry Placeholder="Nhập số điện thoại"
+                   Keyboard="Telephone"
+                  />
+        <Entry x:Name="Entyurl" Placeholder="Nhập địa chỉ web" Completed="Entry_Completed">
+            
+        </Entry>
+        <!--cach 1 -->
+            <Entry Placeholder="sự kiện textchage"
+                   TextChanged="Entry_TextChanged"
+                />
+        <Entry x:Name="enty_2"  IsEnabled="False" />
+            <!-- cach 2 su dung binding -->
+            <Entry Text="{Binding Source={x:Reference text_2},Path=Text}"
+                Placeholder="sự kiện textchage 2 "
+                      
+                    />
+          <Entry x:Name="text_2" Text="" Placeholder="text 2" />
+    </StackLayout>
+
+
+       
+    
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.Pageswitch">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="Giá trị switch 1" FontSize="Medium" TextColor="black"/>
+                <Label Text="{Binding IsToggled,Source={x:Reference switch1}}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Switch x:Name="switch1" VerticalOptions="End"/>
+            </StackLayout>
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand">
+                <Label Text="Giá trị switch 2" FontSize="Medium" TextColor="black"/>
+                <Label x:Name="lbl2" TextColor="Black" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Switch  VerticalOptions="End" Toggled="Switch1_Toggled"/>
+            </StackLayout>
+           
+        </StackLayout>
+       
+       
+    </ContentPage.Content>
+</ContentPage>

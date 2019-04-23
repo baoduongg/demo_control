@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.PageSlider">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Slider">
+                <Setter Property="Maximum" Value="255" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout >
+            <Label Text="Demo Slider" FontSize="30"/>
+            <Label Text="Test control slider"
+                   Rotation="{Binding Source={x:Reference MySlider},Path=Value }"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            <Slider x:Name="MySlider"
+                   
+                   Minimum="0"
+                   Maximum="360" ValueChanged="MySlider_ValueChanged"/>
+            <Label x:Name="lbl_result"
+                    HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="End" >
+                <Slider x:Name="redSlider"
+                ValueChanged="RedSlider_ValueChanged" />
+
+                <Label x:Name="redLabel" />
+
+                <Slider x:Name="greenSlider"
+                ValueChanged="RedSlider_ValueChanged" />
+
+                <Label x:Name="greenLabel" />
+
+                <Slider x:Name="blueSlider"
+                ValueChanged="RedSlider_ValueChanged" />
+
+                <Label x:Name="blueLabel" />
+                
+            </StackLayout>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

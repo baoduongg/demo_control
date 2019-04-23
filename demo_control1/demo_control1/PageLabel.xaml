@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.PageLabel"
+             Title="Label Demo">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Demo Label" FontSize="30"/>
+            <Label Text="Text gạch chân" TextDecorations="Underline"  />
+            <Label Text="Text gạch ngang " TextDecorations="Strikethrough" />
+            <Label Text="Text gạch chân và gạch ngang" TextDecorations="Underline, Strikethrough" />
+            <Label  Text="Text màu mã Hex " TextColor="#77d065" FontSize = "20" />
+            
+            <Label Text="Chữ mặc định" />
+            <Label Text="Màu chữ và kiểu chữ" TextColor="Red" FontAttributes="Bold"/>
+            <Label Text="Kiểu chữ" FontAttributes="Italic" FontSize="Small"/>
+            <Label Text="Có sử dụng MaxLines.khi văn bản dài thì chỉ để 2 dòng Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+                   LineBreakMode="WordWrap"
+                   MaxLines="2" />
+            <Label Text="Khoản cách dòng có thể thiết lập bằng LineHeight Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Kiểu liên kết, click " />
+                        <Span Text="here"
+                        TextColor="Blue"
+                         TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://google.com.vn" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text=" để di chuyển đến trang google.com" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

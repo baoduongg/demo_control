@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_control1.PageButton"
+             xmlns:local="clr-namespace:demo_control1" >
+    <ContentPage.BindingContext>
+        <local:CommandDemoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Demo Button" FontSize="30"/>
+            <Label x:Name="label"
+               Text="Click the Button below"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center" />
+
+            <Button x:Name="btn_1"
+                Text="Click to Rotate Text!"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Released="Btn_1_Released"
+                    Pressed="Btn_1_Pressed"
+               />
+            <Entry Placeholder="Tên đăng nhập " TextChanged="Entry_TextChanged" Completed="Entry_Completed"/>
+            <Entry x:Name="etry_pass" Placeholder="Mật khẩu " IsPassword="True" Completed="Etry_pass_Completed" />
+            <Button
+                x:Name="btn_login"
+                Text="Đăng nhập"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                IsEnabled="False"
+                Clicked="Button_Clicked"
+               />
+            <Label Text="{Binding Number, StringFormat='Value is now {0}'}"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center" />
+
+            <Button Text="Multiply by 2"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding MultiplyBy2Command}" />
+
+            <Button Text="Divide by 2"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding DivideBy2Command}" />
+            <Button>
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        
+                        <On Platform="Android" Value="Resources/drawable/twitter.png" />
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+   
+
+   
+</ContentPage>
